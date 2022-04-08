@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Nono</title>
+  <link rel="stylesheet" href=../css/style.css>
+  <!-- boootstrap vue-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- boootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+</head>
+
+<body class="container-fluid">
+<div class="row">
+      <div class="col p-0" id="carte"></div>
+
+      <div class="col p-0 param">
+
+        <!-- contrôleur -->
+        <div class="controleur">
+          <!-- buttons -->
+          <div class="bg-warning buttons text-center">
+            <a>
+              <i id="start" class="bi bi-play-circle bi-pause-circle"></i>
+            </a>
+            <a>
+              <i id="reset" class="bi bi-arrow-counterclockwise"></i>
+            </a>
+            <a>
+              <i id="update" class="bi bi-arrow-repeat"></i>
+            </a>
+          </div>
+          <!-- neurone -->
+          <h3 class="text-warning">Controller</h3>
+          <div class="container">
+            <div id="myDiagramDiv"></div>
+          </div>
+        </div>
+
+       <!--  <div class="vision">
+          <h3 class="text-warning">Vision</h3>
+          <input type="number" id="vision" value="100">
+          <button type="submit" id="apply">apply</button>
+        </div> -->
+        <div class="container vision">
+          <h3 class="text-warning">Vision</h3>
+          <div class="input-group mb-3">
+            <input type="number" id="vision" value="100" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-warning" type="submit" id="apply">apply</button>
+            </div>
+          </div>
+        </div>
+        <!-- battery -->
+        <div class="container">
+          <h3 class="text-warning">Battery</h3>
+          <div class="container-battery">
+            <div class="progressDiv" id="battery"></div>
+          </div>
+        </div>
+
+        <!-- score -->
+        <div class="container">
+          <h3 class="text-warning">Score</h3>
+          <div class="container-score">
+            <div class="progressDiv" id="score"></div>
+          </div>
+        </div>
+
+      </div>
+
+</div>
+
+
+<script src="../pixi/pixi.min.js"></script>
+<script src="../js/globals.js"></script>
+<script src="../js/robot.js"></script>
+<script src="../js/cherry.js"></script>
+<script src="../js/main.js"></script>
+<script src="../pixi/go-debug.js"></script>
+<script src="../js/nn-controller.js"></script>
+<script src="../js/obstacle.js"></script>
+
+
+<!-- nono act -->
+<script type="text/javascript">
+  demo_init();
+</script>
+
+
+</body>
+
+</html>
